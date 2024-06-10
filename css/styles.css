@@ -183,8 +183,9 @@ a{
     font-size: 48px;
     font-weight: 900;
     color: #fff;
-    padding: 5px 130px;
+    padding: 22px 130px;
     margin-top: 150px;
+    font-family: "Montserrat", sans-serif !important;
 }
 .item-client{
     border-radius: 16px;
@@ -487,14 +488,13 @@ footer{
         color: rgba(187, 44, 38, 1);
     }
     .h2-title-client{
-        margin-top: 15px;
+        margin-top: 50px;
         background: url("../images/bg-title-client-mobi.png") center center no-repeat;
         font-size: 20px;
         font-weight: 800;
-        font-family: "Montserrat", sans-serif !important;
         height: 78px;
         text-align: center;
-        padding: 12px 30px;
+        padding: 12px 50px;
     }
     .regular_5{
         margin-bottom: 130px;
