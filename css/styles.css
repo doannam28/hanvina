@@ -58,17 +58,16 @@ a{
     top: 0px;
     width: 100%;
 }
-.navbar-red #div-menu .bor-menu-top{
+.navbar-red #div-menu{
     background: #BB2C26 !important;
 }
-#div-menu .bor-menu-top{
+#div-menu{
     background: rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     width: 100%;
     display: flex;
     justify-content: space-between;
-}
-#div-menu{
+    margin-top: 20px;
     padding: 5px 40px;
 }
 #a-phone{
@@ -340,7 +339,6 @@ footer{
     background: #fff;
     padding: 0px 15px;
     margin-top: 30px;
-    position: relative;
 }
 #register-phone input:focus{
     outline: none;
@@ -398,6 +396,19 @@ footer{
     color: #fff;
 }
 @media (max-width: 768px) {
+    .navbar-red #div-menu{
+        background: none !important;
+    }
+    .navbar-red #div-menu .bor-menu-top{
+        background: #BB2C26 !important;
+    }
+    #div-menu .bor-menu-top {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
     .padding-left-desktop-20{
         padding-left: 15px;
     }
@@ -409,6 +420,7 @@ footer{
     }
     #div-menu{
         padding: 0px;
+        margin-top: 0px;
     }
     #wrapper-video .div-welcome{
        background: none;
