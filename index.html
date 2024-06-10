@@ -1,13 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="js/bootstrap-5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" type="text/css" href="js/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
           rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smooch&display=swap" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <title>Hanvina</title>
 </head>
@@ -17,13 +23,16 @@
         <source src="video.mp4" type="video/mp4">
     </video>
     <div class="div-welcome"></div>
+    <img id="img-welcome" src="images/Welcome-to-China.png" class="show-mobile"/>
     <div id="wrapper-menu">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container" id="div-menu">
-                <a class="navbar-brand" href="/"><img src="images/logo.png"/></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <div class="bor-menu-top">
+                    <a class="navbar-brand" href="/"><img id="img-logo" src="images/logo.png"/></a>
+                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -57,12 +66,12 @@
     <div class="div-bor">
         <div class="container">
             <div class="row">
-                <div class="col-7 flex-center">
-                    <img src="images/map.png">
+                <div class="col-12 col-md-7 flex-center">
+                    <img class="width-100-percent" src="images/map.png">
                 </div>
-                <div class="col-5 flex-center">
+                <div class="col-12 col-md-5 flex-center">
                     <div>
-                        <h2 class="h2-title">Khám phá TRUNG QUỐC cùng HANVINA TRAVEL</h2>
+                        <h2 class="h2-title title-red-mobile">Khám phá TRUNG QUỐC cùng HANVINA TRAVEL</h2>
                         <div class="margin-top-30 div-dev">HanVina Travel - Nơi mà chuyến du lịch của bạn trở nên đáng nhớ và tuyệt vời. Với cam kết về uy tín, chất lượng dịch vụ và đội ngũ chuyên viên tư vấn giàu kinh nghiệm, chúng tôi tự hào là đối tác tin cậy của bạn trên hành trình khám phá thế giới.</div>
                         <button class="btn-hanvina margin-top-20">Hiểu hơn về chúng tôi</button>
                     </div>
@@ -73,12 +82,11 @@
 </section>
 <section id="block-tq">
     <div class="container">
-        <div class="flex-center">
-            <img src="images/text-tg.png"/>
-        </div>
+        <h3 class="h3-tg-small text-center">Vạn dặm</h3>
+        <h3 class="h3-tg-big text-center">Trung Hoa</h3>
     </div>
     <div class="container">
-        <div class="col-8 offset-2">
+        <div class="col-12 col-md-8 offset-md-2">
             <div id="wrapper-tq">
                 <div class="item">
                     <img src="images/medal-star.png"/>
@@ -107,13 +115,13 @@
 <section id="block-tour">
     <div class="container">
         <div class="flex-center">
-            <h2 class="text-center">Các Tour Du Lịch</h2>
+            <h2 class="text-center title-red-mobile">Các Tour Du Lịch</h2>
         </div>
-        <div class="flex-center"><img src="images/sieuhot.png"/> </div>
+        <div class="flex-center"><img class="img-sh" src="images/sieuhot.png"/> </div>
     </div>
-    <div class="container margin-top-30">
+    <div class="container margin-top-30 show-desktop">
         <div class="row">
-            <div class="col-3">
+            <div class="col-md-3">
                 <div class="div-tour-item">
                     <img class="img-tour" src="images/tour-1.png"/>
                     <p class="p-date"><span>6N5Đ</span></p>
@@ -127,13 +135,13 @@
                     <p class="p-price">4.500.000đ</p>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-md-6">
                 <p class="p-date"><span>6N5Đ</span></p>
                 <h3>TOUR BẮC KINH - TÔ CHÂU - HÀNG CHÂU - THƯỢNG HẢI</h3>
                 <p class="p-price">4.500.000đ</p>
                 <img class="img-tour" src="images/tour-3.png"/>
             </div>
-            <div class="col-3">
+            <div class="col-md-3">
                 <div class="div-tour-item">
                     <img class="img-tour" src="images/tour-1.png"/>
                     <p class="p-date"><span>6N5Đ</span></p>
@@ -142,6 +150,42 @@
                 </div>
                 <div class="div-tour-item margin-top-30">
                     <img class="img-tour" src="images/tour-2.png"/>
+                    <p class="p-date"><span>6N5Đ</span></p>
+                    <h3>TOUR BẮC KINH - TÔ CHÂU - HÀNG CHÂU - THƯỢNG HẢI</h3>
+                    <p class="p-price">4.500.000đ</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container show-mobile">
+        <div class="row">
+            <div class="regular_tg slider">
+                <div class="div-tour-item">
+                    <img class="img-tour" src="images/tour-1.png"/>
+                    <p class="p-date"><span>6N5Đ</span></p>
+                    <h3>TOUR BẮC KINH - TÔ CHÂU - HÀNG CHÂU - THƯỢNG HẢI</h3>
+                    <p class="p-price">4.500.000đ</p>
+                </div>
+                <div class="div-tour-item">
+                    <img class="img-tour" src="images/tour-1.png"/>
+                    <p class="p-date"><span>6N5Đ</span></p>
+                    <h3>TOUR BẮC KINH - TÔ CHÂU - HÀNG CHÂU - THƯỢNG HẢI</h3>
+                    <p class="p-price">4.500.000đ</p>
+                </div>
+                <div class="div-tour-item">
+                    <img class="img-tour" src="images/tour-1.png"/>
+                    <p class="p-date"><span>6N5Đ</span></p>
+                    <h3>TOUR BẮC KINH - TÔ CHÂU - HÀNG CHÂU - THƯỢNG HẢI</h3>
+                    <p class="p-price">4.500.000đ</p>
+                </div>
+                <div class="div-tour-item">
+                    <img class="img-tour" src="images/tour-1.png"/>
+                    <p class="p-date"><span>6N5Đ</span></p>
+                    <h3>TOUR BẮC KINH - TÔ CHÂU - HÀNG CHÂU - THƯỢNG HẢI</h3>
+                    <p class="p-price">4.500.000đ</p>
+                </div>
+                <div class="div-tour-item">
+                    <img class="img-tour" src="images/tour-1.png"/>
                     <p class="p-date"><span>6N5Đ</span></p>
                     <h3>TOUR BẮC KINH - TÔ CHÂU - HÀNG CHÂU - THƯỢNG HẢI</h3>
                     <p class="p-price">4.500.000đ</p>
@@ -156,20 +200,219 @@
             <h2 class="h2-title-client">Khách Hàng Nói Gì Về Chúng Tôi</h2>
         </div>
     </div>
+    <div class="container margin-top-30">
+        <div class="regular_5 slider row">
+            <div class="item-client">
+                <a href="/chi-tiet-tin/">
+                    <img class="img-client" src="images/img-client-1.png"/>
+                    <h3 class="h3-client">NHÀ XUẤT BẢN GIÁO DỤC VIỆT NAM</h3>
+                    <div class="div-des-client">
+                        <div class="div-dau">
+                            <p>&nbsp;</p>
+                        </div>
+                        <p class="p-des">HanVina Travel là đơn vị chúng tôi luôn tin tưởng cho chuyến đi của mình. Đến với HanVina chúng tôi luôn nhận được sự quan tâm từ đội ngũ chuyên nghiệp và được hưởng những dịch vụ cao cấp nhất. </p>
+                    </div>
+                </a>
+            </div>
+            <div class="item-client">
+                <a href="/chi-tiet-tin/">
+                    <img class="img-client" src="images/img-client-1.png"/>
+                    <h3 class="h3-client">NHÀ XUẤT BẢN GIÁO DỤC VIỆT NAM</h3>
+                    <div class="div-des-client">
+                        <div class="div-dau">
+                            <p>&nbsp;</p>
+                        </div>
+                        <p class="p-des">HanVina Travel là đơn vị chúng tôi luôn tin tưởng cho chuyến đi của mình. Đến với HanVina chúng tôi luôn nhận được sự quan tâm từ đội ngũ chuyên nghiệp và được hưởng những dịch vụ cao cấp nhất. </p>
+                    </div>
+                </a>
+            </div>
+            <div class="item-client">
+                <a href="/chi-tiet-tin/">
+                    <img class="img-client" src="images/img-client-1.png"/>
+                    <h3 class="h3-client">NHÀ XUẤT BẢN GIÁO DỤC VIỆT NAM</h3>
+                    <div class="div-des-client">
+                        <div class="div-dau">
+                            <p>&nbsp;</p>
+                        </div>
+                        <p class="p-des">HanVina Travel là đơn vị chúng tôi luôn tin tưởng cho chuyến đi của mình. Đến với HanVina chúng tôi luôn nhận được sự quan tâm từ đội ngũ chuyên nghiệp và được hưởng những dịch vụ cao cấp nhất. </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="margin-top-50">
+        <div class="flex-center">
+            <p class="p-title-g">Ghé thăm chúng tôi trên:</p>
+        </div>
+        <div class="flex-center">
+            <div id="div-social">
+                <a href="">
+                    <div class="item-social flex-center">
+                        <img src="images/icon-fb.png"/>
+                        <p>HanVina Travel</p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="item-social flex-center">
+                        <img src="images/icon-tiktok.png"/>
+                        <p>HanVina Travel</p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="item-social flex-center">
+                        <img src="images/icon-yt.png"/>
+                        <p>HanVina Travel</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 </section>
+<section id="block-news">
+    <div class="container flex-center">
+        <h3 class="h3-title-new margin-top-30 title-red-mobile">Cẩm Nang Du Lịch Cùng HanVina</h3>
+    </div>
+    <div class="container">
+        <div class="regular_new">
+            <a href="chi-tiet-tin/">
+                <div class="item-new">
+                    <img class="img-new" src="images/img-new.png"/>
+                    <h3>Chiêm ngưỡng Thúc Hà Cổ Trấn ngàn năm đẹp thổn thức tại Lệ Giang</h3>
+                </div>
+            </a>
+            <a href="chi-tiet-tin/">
+                <div class="item-new">
+                    <img class="img-new" src="images/img-new.png"/>
+                    <h3>Chiêm ngưỡng Thúc Hà Cổ Trấn ngàn năm đẹp thổn thức tại Lệ Giang</h3>
+                </div>
+            </a>
+            <a href="chi-tiet-tin/">
+                <div class="item-new">
+                    <img class="img-new" src="images/img-new.png"/>
+                    <h3>Chiêm ngưỡng Thúc Hà Cổ Trấn ngàn năm đẹp thổn thức tại Lệ Giang</h3>
+                </div>
+            </a>
+            <a href="chi-tiet-tin/">
+                <div class="item-new">
+                    <img class="img-new" src="images/img-new.png"/>
+                    <h3>Chiêm ngưỡng Thúc Hà Cổ Trấn ngàn năm đẹp thổn thức tại Lệ Giang</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-12">
+                <a href="">
+                    <img id="logo-footer" src="images/logo-footer.png"/>
+                </a>
+                <p class="p-des-footer">HanVina Travel - Nơi mà chuyến du lịch của bạn trở nên đáng nhớ và tuyệt vời. Với cam kết về uy tín, chất lượng dịch vụ và đội ngũ chuyên viên tư vấn giàu kinh nghiệm, chúng tôi tự hào là đối tác tin cậy của bạn trên hành trình khám phá thế giới.</p>
+            </div>
+            <div class="col-md-2 col-12 padding-left-desktop-20">
+                <h3 class="h3-footer">VỀ CHÚNG TÔI</h3>
+                <ul class="ul-footer">
+                    <li><a href="/">Trang chủ</a></li>
+                    <li><a href="/gioi-thieu">Giới thiệu</a></li>
+                    <li><a href="/danh-sach-tour">Danh sách tour</a></li>
+                    <li><a href="/khach-hang">Khách hàng</a></li>
+                    <li><a href="/tin-tuc">Tin tức</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-12 padding-left-desktop-20">
+                <h3 class="h3-footer">THÔNG TIN LIÊN HỆ</h3>
+                <div class="p-social-f">
+                    <p><img src="images/icon-phone-f.png"/></p>
+                    <span>0912 944 666</span>
+                </div>
+                <div class="p-social-f">
+                    <p><img src="images/icon-sms-f.png"/></p>
+                    <span>info@hanvinatravel.vn</span>
+                </div>
+                <div class="p-social-f">
+                    <p><img src="images/icon-location-f.png"/></p>
+                    <span>204 Lê Trọng Tấn, Phường Khương Mai, Quận Thanh Xuân, Hà Nội</span>
+                </div>
+            </div>
+            <div class="col-md-4 col-12 padding-left-desktop-20">
+                <h3 class="h3-footer">ĐĂNG KÝ NHẬN THÔNG BÁO</h3>
+                <form id="register-phone" class="row g-3 needs-validation" novalidate>
+                    <div class="div-bor-register">
+                        <input type="tel" class="form-control" id="input-phone" minlength="10" maxlength="10" placeholder="Nhập số điện thoại" required/>
+                        <div class="invalid-tooltip">
+                            Xin vui lòng nhập số điện thoại của bạn
+                        </div>
+                        <button id="btn-phone" type="submit">&nbsp;</button>
+                    </div>
+                </form>
+                <div class="div-social-footer">
+                    <a href=""><img src="images/icon-fb.png"/></a>
+                    <a href=""><img src="images/icon-yt.png"/></a>
+                    <a href=""><img src="images/icon-tiktok.png"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="div-copyright">
+            Copyright 2024 © All Right Reserved Design by HanVina
+        </div>
+    </div>
+</footer>
 </body>
 <script
         src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
         crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
+<script src="js/bootstrap-5.3.0/js/bootstrap.bundle.min.js"></script>
 <script src="js/hanvina.js"></script>
+<script src="js/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var numberItem = screen.width >= 768 ? 2: 1;
+        $(".regular_5").slick({
+            dots: false,
+            infinite: true,
+            autoplay: true,
+            slidesToShow: numberItem,
+            slidesToScroll: 1
+        });
+        var numberItemNew = screen.width >= 768 ? 3.1: 1;
+        $(".regular_new").slick({
+            dots: screen.width < 768,
+            infinite: true,
+            autoplay: true,
+            slidesToShow: numberItemNew,
+            slidesToScroll: 1
+        });
+        if(screen.width < 768){
+            $(".regular_tg").slick({
+                dots: true,
+                infinite: true,
+                autoplay: true,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+        }
+    });
+    (() => {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+            }, false)
+        })
+    })()
+</script>
 </html>
