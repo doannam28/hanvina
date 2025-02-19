@@ -1,0 +1,155 @@
+.hero-image {
+    max-height: 810px;
+    width: 100%;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    min-height: 375px;
+}
+.btn-primary-secondary {
+    display: flex;
+    width: 233px;
+    height: 70px;
+    padding: 12px 28px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 16px;
+    background: #BB2C26;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #FFFFFF;
+    border: none;
+}
+.select-file{
+    display: flex;
+    width: 169px;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.text-help{
+    margin-left: 15px;
+}
+.h1{
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700 !important;
+    line-height: normal;
+}
+.fs-4{
+    font-weight: 500 !important;
+}
+p{
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.pt-120{
+    padding-top: 120px;
+}
+.border-sec{
+    border-radius: 16px;
+    border: 1px solid #000000;
+}
+.input-sec{
+    height: 70px;
+    padding: 12px 28px;
+    align-self: stretch;
+}
+.textarea-sec{
+    height: 144px;
+    padding: 12px 28px;
+    gap: 16px;
+    align-self: stretch;
+}
+
+.pt16{
+    padding-top: 16px;
+}
+
+.img-contact{
+    width: 420px;
+    height: 420px;
+}
+.bg-contact{
+    background: url("../images/bg-contact.png") no-repeat center;
+    background-size: contain;
+}
+.pt-200{
+    padding-top: 200px;
+}
+.form-control:focus,
+.form-control{
+    background: transparent;
+}
+.margin-top-15{
+    margin-top: 15px;
+}
+@media (min-width: 744px) and (max-width: 1024px) {
+    .img-contact{
+        height: auto;
+    }
+}
+/*on mobile screen*/
+@media (max-width: 768px) {
+    /*css for placeholder*/
+    .input-sec{
+        height: 48px;
+    }
+    .textarea-sec{
+        height: 80px;
+    }
+    .textarea-sec::placeholder,
+    .input-sec::placeholder{
+        font-size: 12px !important;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .text-help{
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    .btn-primary-secondary{
+        width: 200px;
+        height: 42px;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+    .pt-120{
+        padding-top: 60px;
+    }
+    .h1{
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    p{
+        color: #000;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .bg-contact
+    {
+        background-size: cover;
+        background-position: center -70px
+    }
+    .select-file{
+        display: flex;
+        width: auto;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+    }
+}
