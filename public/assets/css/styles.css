@@ -157,7 +157,7 @@ a{
     right: 15px;
     z-index: 998;
 }
-#a-chat-fb{
+.a-chat-fb{
     position: fixed;
     bottom: 130px;
     right: 15px;
@@ -590,7 +590,7 @@ footer{
     -o-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
 }
-#a-chat-fb::before{
+.a-chat-fb::before{
     content: '';
     top: -5px;
     left: -5px;
@@ -879,11 +879,11 @@ footer{
         color: #000;
         font-weight: 700;
     }
-    #a-phone,#a-phone img, #a-chat-fb,#a-chat-fb img{
+    #a-phone,#a-phone img, .a-chat-fb,.a-chat-fb img{
         width: 64px;
         height: 64px;
     }
-    #a-chat-fb{
+    .a-chat-fb{
         bottom: 120px;
     }
     #a-phone{
@@ -1152,6 +1152,58 @@ span.page-link.no-border{
 .div-text p{
     margin:0px !important;
 }
+.modal-dialog .btn-close{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 999;
+}
+.modal-dialog{
+    min-width: 800px;
+}
+#popup-right{
+    width: 40%;
+    padding: 30px;
+    margin-top: 30px;
+}
+#popup-left img{
+    width: 100%;
+}
+#popup-left{
+    display: block;
+    width: 60%;
+    border-radius: 16px 0px 0px 16px;
+}
+.modal-body .form-group{
+    position: relative;
+}
+.modal-body{
+    padding: 0px;
+    display: flex;
+}
+#popup-right p{
+    font-size: 13px;
+}
+#popup-right h4{
+    font-size: 20px;
+    font-weight: bold;
+}
+#btn-submit-popup{
+    padding: 10px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 16px;
+    background: #BB2C26;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #FFFFFF;
+    border: none;
+    margin-top: 20px;
+}
+
 @media (min-width:  768px) and (max-width: 1200px) {
     #div-menu li a {
         font-size: 1rem;
@@ -1241,6 +1293,15 @@ span.page-link.no-border{
         height: auto;
         padding: 0px;
         margin: 5px;
+    }
+    #popup-left{
+        display: none;
+    }
+    #popup-right{
+        width: 100%;
+    }
+    .modal-dialog{
+        min-width: auto;
     }
 }
 #block-tour a{

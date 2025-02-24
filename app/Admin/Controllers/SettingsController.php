@@ -89,11 +89,14 @@ class SettingsController extends AdminController
         $form->text('facebook', __('Link fanpage'));
         $form->text('youtube', __('Link youtube'));
         $form->text('tiktok', __('Link tiktok'));
+        $form->text('link_chat', __('Link chat'));
+        $form->text('link_chat_mobile', __('Link chat mobile'));
         $form->text('email_receive', __('Email nhận liên hệ'));
         $form->image('logo', __('Logo'));
         $form->image('logo_footer', __('Logo footer'));
         $form->image('favicon', __('Favicon'));
         $form->image('image_og', __('Ảnh show trên social'));
+        $form->switch('is_show_popup', __('Có show popup'));
         $form->image('image_popup', __('Ảnh popup'))->help('<b style="color:red">(Nên up ảnh vuông tỉ lệ 1:1)</b>');
         $form->text('site_title', __('Tiêu đề website'));
         $form->text('meta_description', __('Meta description'));

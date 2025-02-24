@@ -2,7 +2,10 @@
 <a href="tel:{{"+84".substr($setting->phone,1,strlen($setting->phone))}}" class="a-animation" id="a-phone">
     <img id="img-phone" src="/assets/images/phone-new.svg"/>
 </a>
-<a href="https://m.me/hanvinatravel" class="a-animation" id="a-chat-fb">
+<a href="{{$setting->link_chat}}" class="a-animation a-chat-fb show-desktop">
+    <img id="img-phone" src="/assets/images/chat-fb.svg"/>
+</a>
+<a href="{{$setting->link_chat_mobile}}" class="a-animation a-chat-fb show-mobile">
     <img id="img-phone" src="/assets/images/chat-fb.svg"/>
 </a>
 <footer>
