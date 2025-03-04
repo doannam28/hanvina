@@ -201,6 +201,9 @@
     transition: background 450ms ease-in;
     -webkit-appearance: none;
 }
+.range-wrap-time {
+    margin-bottom: 20px !important;
+}
 .range-wrap {
     position: relative;
     margin-bottom: 50px;
@@ -725,9 +728,10 @@
     padding: 20px;
     width: 100%;
     z-index: 99;
+    display:none;
 }
 #div-filter .position-relative{
-    padding-bottom: 110px;
+    padding-bottom: 0px;
 }
 .p-label-booking{
     color: #808080;
@@ -1097,7 +1101,8 @@
         background-size: cover;
     }
     #div-bor-filter{
-        height: calc(100vh - 205px);
+        /*height: calc(100vh - 205px);*/
+        height: 100vh;
         overflow-x: auto;
     }
     .div-filter .position-relative{

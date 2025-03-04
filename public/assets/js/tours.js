@@ -29,6 +29,13 @@ var TOURS = {
             }
             TOURS.filter_tours(idForm, 1);
         });
+        $('.div-bor-filter').on('change','input',function () {
+            var idForm = $(this).attr("data-id");
+            if(idForm === "frm-filter-mobile"){
+                $('#frm-filter-mobile #span-close').click();
+            }
+            TOURS.filter_tours(idForm, 1);
+        });
         $('#div-page').on('click', '.page-link', function () {
             var idForm = screen.width >= 768 ? "frm-filter" : "frm-filter-mobile",
                 link = $(this).attr('href'), page = 1;

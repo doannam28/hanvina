@@ -113,11 +113,11 @@
                 <div class="row">
                     <div class="col-12 col-md-4 div-txt-tab" data="{{$i}}">
                         <h2 class="h2-title-day fs-3 font-16-mobile">NGÀY {{$i}}</h2>
-                        <div class="div-des-tour text-align-justify h-100">
+                        <div class="div-des-tour h-100">
                             @if(isset($routes[$i]))
                                 <h3>{{$routes[$i][0]->name}}{{(count($routes[$i])-1 > 0) ? " - ".$routes[$i][count($routes[$i])-1]->name : ""}}</h3>
                             @endif
-                                <div class="show-desktop">{!! (isset($detailFeatures[$i]) ? $detailFeatures[$i][0]?->description : "") !!}</div>
+                                <div class="show-desktop text-align-justify">{!! (isset($detailFeatures[$i]) ? $detailFeatures[$i][0]?->description : "") !!}</div>
                         </div>
                     </div>
                     <div class="col-12 col-md-8">

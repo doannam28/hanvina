@@ -110,7 +110,7 @@ $content = isset($page->content) ? $page->content : "";
                                         lọc
                                     </button>
                                 </div>
-                                <div id="div-bor-filter" class="w-100">
+                                <div id="div-bor-filter" class="w-100 div-bor-filter">
                                     <div>
                                         <h3 class="title-filter font-16-mobile">ĐIỂM XUẤT PHÁT</h3>
                                         @foreach($locationStarts as $k=>$row)
@@ -118,9 +118,9 @@ $content = isset($page->content) ? $page->content : "";
                                                 <input class="form-check-input"
                                                        {{isset($request['location_start']) && in_array($row->name, $request['location_start']) ? 'checked="checked"' : ""}} name="location_start[]"
                                                        type="checkbox" value="{!! $row->name !!}"
-                                                       id="flexCheckDefault{{$k}}">
+                                                       id="flexCheckDefaultDD{{$k}}" data-id="frm-filter">
                                                 <label class="form-check-label font-14-mobile"
-                                                       for="flexCheckDefault{{$k}}">
+                                                       for="flexCheckDefaultDD{{$k}}">
                                                     {!! $row->name !!}
                                                 </label>
                                             </div>
@@ -134,7 +134,7 @@ $content = isset($page->content) ? $page->content : "";
                                                 <input class="form-check-input"
                                                        {{isset($request['locations']) && in_array($row->id, $request['locations']) ? 'checked="checked"' : ""}} name="locations[]"
                                                        type="checkbox" value="{!! $row->id !!}"
-                                                       id="flexCheckDefault{{$k}}">
+                                                       id="flexCheckDefault{{$k}}" data-id="frm-filter">
                                                 <label class="form-check-label font-14-mobile"
                                                        for="flexCheckDefault{{$k}}">
                                                     {!! $row->name !!}
@@ -149,7 +149,7 @@ $content = isset($page->content) ? $page->content : "";
                                             <div class="form-check">
                                                 <input class="form-check-input" name="ways[]"
                                                        {{isset($request['ways']) && in_array($row->id, $request['ways']) ? 'checked="checked"' : ""}} type="checkbox"
-                                                       value="{!! $row->id !!}" id="flexCheckDefaultWay{{$k}}">
+                                                       value="{!! $row->id !!}" id="flexCheckDefaultWay{{$k}}" data-id="frm-filter">
                                                 <label class="form-check-label font-14-mobile"
                                                        for="flexCheckDefaultWay{{$k}}">
                                                     {!! $row->name !!}
@@ -181,7 +181,7 @@ $content = isset($page->content) ? $page->content : "";
                                                        name="price"
                                                        value="{{isset($request['price']) ? $request['price'] : 0}}"
                                                        id="max_price"
-                                                       name="max_price" class="price-range-field range max_price"/>
+                                                       name="max_price" class="price-range-field range max_price" data-id="frm-filter"/>
                                                 <output class="bubble" data=""></output>
                                             </div>
                                         </div>
@@ -191,7 +191,7 @@ $content = isset($page->content) ? $page->content : "";
                                         <h3 class="title-filter font-16-mobile">THỜI GIAN</h3>
                                         <div>
                                             <p class="p-range"><span>0</span><span>{{$maxDay}} ngày</span></p>
-                                            <div class="range-wrap">
+                                            <div class="range-wrap range-wrap-time">
                                                 <?php
                                                 $style = "";
                                                 if (isset($request['day']) && $request['day'] != "") {
@@ -202,7 +202,7 @@ $content = isset($page->content) ? $page->content : "";
                                                 <input type="range" style="{{$style}}" min=0 max="{{$maxDay}}"
                                                        value="{{isset($request['day']) ? $request['day'] : 0}}"
                                                        name="day" id="max_day"
-                                                       class="price-range-field range max_day"/>
+                                                       class="price-range-field range max_day" data-id="frm-filter"/>
                                                 <output class="bubble" data=" ngày"></output>
                                             </div>
                                         </div>
@@ -229,7 +229,7 @@ $content = isset($page->content) ? $page->content : "";
                                         bộ lọc
                                     </button>
                                 </div>
-                                <div id="div-bor-filter">
+                                <div id="div-bor-filter" class="div-bor-filter">
                                     <div class="show-mobile">
                                         <div class="display-flex justify-content-between">
                                             <p class="p-title-filter">Bộ lọc</p>
@@ -243,9 +243,9 @@ $content = isset($page->content) ? $page->content : "";
                                                 <input class="form-check-input"
                                                        {{isset($request['location_start']) && in_array($row->name, $request['location_start']) ? 'checked="checked"' : ""}} name="location_start[]"
                                                        type="checkbox" value="{!! $row->name !!}"
-                                                       id="flexCheckDefault{{$k}}">
+                                                       id="flexCheckDefaultDD{{$k}}" data-id="frm-filter-mobile">
                                                 <label class="form-check-label font-14-mobile"
-                                                       for="flexCheckDefault{{$k}}">
+                                                       for="flexCheckDefaultDD{{$k}}">
                                                     {!! $row->name !!}
                                                 </label>
                                             </div>
@@ -259,7 +259,7 @@ $content = isset($page->content) ? $page->content : "";
                                                 <input class="form-check-input"
                                                        {{isset($request['locations']) && in_array($row->id, $request['locations']) ? 'checked="checked"' : ""}} name="locations[]"
                                                        type="checkbox" value="{!! $row->id !!}"
-                                                       id="flexCheckDefault{{$k}}">
+                                                       id="flexCheckDefault{{$k}}" data-id="frm-filter-mobile">
                                                 <label class="form-check-label font-14-mobile"
                                                        for="flexCheckDefault{{$k}}">
                                                     {!! $row->name !!}
@@ -274,7 +274,7 @@ $content = isset($page->content) ? $page->content : "";
                                             <div class="form-check">
                                                 <input class="form-check-input" name="ways[]"
                                                        {{isset($request['ways']) && in_array($row->id, $request['ways']) ? 'checked="checked"' : ""}} type="checkbox"
-                                                       value="{!! $row->id !!}" id="flexCheckDefaultWay{{$k}}">
+                                                       value="{!! $row->id !!}" id="flexCheckDefaultWay{{$k}}" data-id="frm-filter-mobile">
                                                 <label class="form-check-label font-14-mobile"
                                                        for="flexCheckDefaultWay{{$k}}">
                                                     {!! $row->name !!}
@@ -306,7 +306,7 @@ $content = isset($page->content) ? $page->content : "";
                                                        name="price"
                                                        value="{{isset($request['price']) ? $request['price'] : 0}}"
                                                        id="max_price_mobile"
-                                                       name="max_price" class="price-range-field range max_price"/>
+                                                       name="max_price" class="price-range-field range max_price" data-id="frm-filter-mobile"/>
                                                 <output class="bubble" data=""></output>
                                             </div>
                                         </div>
@@ -316,7 +316,7 @@ $content = isset($page->content) ? $page->content : "";
                                         <h3 class="title-filter font-16-mobile">THỜI GIAN</h3>
                                         <div>
                                             <p class="p-range"><span>0</span><span>{{$maxDay}} ngày</span></p>
-                                            <div class="range-wrap">
+                                            <div class="range-wrap range-wrap-time">
                                                 <?php
                                                 $style = "";
                                                 if (isset($request['day']) && $request['day'] != "") {
@@ -327,7 +327,7 @@ $content = isset($page->content) ? $page->content : "";
                                                 <input type="range" style="{{$style}}" min=0 max="{{$maxDay}}"
                                                        value="{{isset($request['day']) ? $request['day'] : 0}}"
                                                        name="day" id="max_day_mobile"
-                                                       class="price-range-field range max_day"/>
+                                                       class="price-range-field range max_day" data-id="frm-filter-mobile"/>
                                                 <output class="bubble" data=" ngày"></output>
                                             </div>
                                         </div>
@@ -438,6 +438,90 @@ $content = isset($page->content) ? $page->content : "";
             </div>
         </div>
     </section>
+    <?php if(isset($setting->is_show_popup) && $setting->is_show_popup == 1) {?>
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body">
+                    <div id="popup-left" style="background: url('{{Storage::disk('admin')->url($setting->image_popup)}}') center center; background-size: cover;">
+                    </div>
+                    <div id="popup-right">
+                        <h4>LIÊN HỆ VỚI CHÚNG TÔI</h4>
+                        <p>Chinh phục thế giới – điền form để chúng tôi giúp bạn góp ý tùy chỉnh cho chuyến đi của bạn được trở nên phù hợp nhất</p>
+                        @if(session('success'))
+                            <div class="alert alert-success">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+                        <form action="{{url('/send')}}" enctype="multipart/form-data" method="post" class="form-contact needs-validation" novalidate>
+                            @csrf
+                            <div class="form-group pt-2 ">
+                                <input type="text" placeholder="Họ tên" class="form-control input-sec border-sec" id="name"
+                                       name="name" required id="validationServer03" aria-describedby="validationServer03Feedback">
+                                <div class="invalid-tooltip">
+                                    Xin vui lòng nhập họ tên
+                                </div>
+                            </div>
+                            <div class="form-group pt-2 ">
+                                <input type="text" placeholder="Số điện thoại" class="form-control input-sec border-sec"
+                                       id="phone" name="phone" required>
+                                <div class="invalid-tooltip">
+                                    Xin vui lòng nhập số điện thoại
+                                </div>
+                            </div>
+
+                            <div class="form-group pt-2 ">
+                                <input type="text" placeholder="Email" class="form-control input-sec border-sec"
+                                       id="email" name="email">
+                            </div>
+                            <div class="form-group pt-2">
+                            <textarea name="messages" id="messages" class="form-control textarea-sec border-sec"
+                                      placeholder="Để lại lời nhắn" required></textarea>
+                                <div class="invalid-tooltip">
+                                    Xin vui lòng nhập lời nhắn
+                                </div>
+                            </div>
+                            <div class="form-group pt-2 margin-top-15">
+                                <div class="row">
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <button type="submit" id="btn-submit-popup" class="btn-primary-secondary">Gửi ngay</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Hiển thị modal khi trang tải xong
+        document.addEventListener("DOMContentLoaded", function() {
+            var myModal = new bootstrap.Modal(document.getElementById('myModal'));
+            myModal.show();
+        });
+        (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+    <?php }?>
 @stop
 @push('js')
     <script src="{{ asset('/assets/libraries/OwlCarousel2-2.3.4/assets/owl.carousel.js') }}"></script>
