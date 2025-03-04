@@ -1101,8 +1101,7 @@
         background-size: cover;
     }
     #div-bor-filter{
-        /*height: calc(100vh - 205px);*/
-        height: 100vh;
+        height: calc(100vh - 60px);
         overflow-x: auto;
     }
     .div-filter .position-relative{

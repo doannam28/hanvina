@@ -191,7 +191,7 @@ $content = isset($page->content) ? $page->content : "";
                                         <h3 class="title-filter font-16-mobile">THỜI GIAN</h3>
                                         <div>
                                             <p class="p-range"><span>0</span><span>{{$maxDay}} ngày</span></p>
-                                            <div class="range-wrap range-wrap-time">
+                                            <div class="range-wrap">
                                                 <?php
                                                 $style = "";
                                                 if (isset($request['day']) && $request['day'] != "") {
