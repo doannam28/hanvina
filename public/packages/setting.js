@@ -3,7 +3,7 @@ function initEditor() {
     tinymce.remove();
     tinymce.init({
         selector: '.editor',
-        plugins: 'image code autoresize table lists',
+        plugins: 'image code autoresize table lists link',
         toolbar: 'code| undo redo | link image | bold italic | alignleft aligncenter alignright | bullist numlist outdent indent | removeformat | table ',
         min_height: 300,
         placeholder: 'Nhập nội dung bài viết',
