@@ -201,9 +201,6 @@
     transition: background 450ms ease-in;
     -webkit-appearance: none;
 }
-.range-wrap-time {
-    margin-bottom: 20px !important;
-}
 .range-wrap {
     position: relative;
     margin-bottom: 50px;
@@ -722,16 +719,18 @@
     width: 100%;
     margin-top: 20px;
 }
+#div-bor-search .btn-search-filter{
+    display: none;
+}
 #div-bor-search{
     position: absolute;
     bottom: 0px;
     padding: 20px;
     width: 100%;
     z-index: 99;
-    display:none;
 }
 #div-filter .position-relative{
-    padding-bottom: 0px;
+    padding-bottom: 55px;
 }
 .p-label-booking{
     color: #808080;
@@ -895,6 +894,9 @@
     }
 }
 @media (max-width: 767px) {
+    .btn-clear-filter {
+        margin-top:5px;
+    }
     .h3-no-tour{
         margin-top: 30px;
         font-size: 18px;
@@ -1101,7 +1103,7 @@
         background-size: cover;
     }
     #div-bor-filter{
-        height: calc(100vh - 60px);
+        height: calc(100vh - 148px);
         overflow-x: auto;
     }
     .div-filter .position-relative{

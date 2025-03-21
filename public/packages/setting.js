@@ -9,6 +9,7 @@ function initEditor() {
         placeholder: 'Nhập nội dung bài viết',
         resize: true,
         forced_root_block: 'p',
+        font_size_formats: '12px 14px 16px 18px 24px 36px 48px 72px',
         newline_behavior: '',
         autoresize_bottom_margin: 100,
         menu: {
